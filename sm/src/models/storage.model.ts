@@ -1,4 +1,7 @@
-import {Entity, model, property} from '@loopback/repository';
+import {Entity, model, property, hasMany} from '@loopback/repository';
+import {Product} from './product.model';
+import {Productstorage} from './productstorage.model';
+import {Inputoutput} from './inputoutput.model';
 
 @model()
 export class Storage extends Entity {
@@ -42,6 +45,11 @@ export class Storage extends Entity {
   })
   name: string;
 
+  @hasMany(() => Product, {through: {model: () => Productstorage}})
+  products: Product[];
+
+  @hasMany(() => Inputoutput)
+  storageIO: Inputoutput[];
 
   constructor(data?: Partial<Storage>) {
     super(data);

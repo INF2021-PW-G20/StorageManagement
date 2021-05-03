@@ -1,4 +1,5 @@
-import {Entity, model, property} from '@loopback/repository';
+import {Entity, model, property, hasMany} from '@loopback/repository';
+import {Inputoutput} from './inputoutput.model';
 
 @model()
 export class Product extends Entity {
@@ -33,6 +34,8 @@ export class Product extends Entity {
   })
   stock?: number;
 
+  @hasMany(() => Inputoutput)
+  productIO: Inputoutput[];
 
   constructor(data?: Partial<Product>) {
     super(data);
