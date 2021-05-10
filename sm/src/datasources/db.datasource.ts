@@ -3,8 +3,13 @@ import {juggler} from '@loopback/repository';
 
 const config = {
   name: 'db',
-  connector: 'memory',
-  localStorage: '',
+  connector: 'mysql',
+  url: '',
+  host: 'localhost',
+  port: 3306,
+  user: 'root',
+  database: 'storage_management',
+  //localStorage: '',
   file: './data/db.json'
 };
 
