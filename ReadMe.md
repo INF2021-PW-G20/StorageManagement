@@ -1,5 +1,5 @@
 # Título do projeto
-
+[Docs](ReadMe.md#L60).
 Repositório criado para alojar o código fonte do projeto realizado no âmbito da disciplica de programação web, [Instituto Superior da Maia](https://www.ismai.pt/pt).
 
 ## Breve descrição do tema
@@ -39,13 +39,17 @@ _As Frameworks & Libraries utilizadas neste projeto foram as seguintes._
 _O projeto está dividido pelo seguintes capítulos._
 
 ### Project presentation
-* Chapter 1: [Project presentation](doc/c1.md)
-### User Interface 
-* Chapter 2: [User Interface Prototype and Sitemap](doc/c2.md)
-### Product
-* Chapter 3: [Product](doc/c3.md)
-### Presentation
-* Chapter 4: [Presentation](doc/c4.md)
+* Capítulo 1: [Project presentation](Docs/c1.md)
+### Como iniciar a aplicação
+* Capítulo 2:
+### Como testar a aplicação
+* Capítulo 3:
+### User Interface
+* Capítulo 4: [User Interface Prototype and Sitemap](doc/c2.md)
+### O produto
+* Capitulo 5: [Product](doc/c3.md)
+### Apresentação
+* Chapter 6: [Presentation](doc/c4.md)
 
 ## Equipa de desenvolvimento
 * João Afonso - [@Jafonso55](https://github.com/Jafonso55)
