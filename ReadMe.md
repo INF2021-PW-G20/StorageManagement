@@ -1,25 +1,25 @@
-# My work assignment Title
+# Título do projeto
 
 Repository to host the project developed for 'some class', a fisrt year subject at SOMESCHOOL. Developed by Group ALPHA : [@MarcoOliveira](https://github.com/marcoamarooliveira), [add others].
 
-## Short theme description
+## Breve descrição do tema
 
 O âmbito deste tema engloba a utilização de uma aplicação de apoio a manutenções de máquinas industriais, onde poderão ser armazenadas peças de substituição numa caixa, pertencente a uma prateleira, localizada num determinado corredor. 
 Quando forem retiradas ou adicionadas peças a este armazém, deverá ser feito um registo das alterações de stock, mantendo um histórico de transações do mesmo. Com a estrutura - criada em OpenAPI 3.0 - deverá ser possível executar alguns os métodos baseados numa arquitetura de serviços do tipo REST (GET, POST, PUT, DELETE, PATCH,…).
 
-## Repository organization
+## Organização do repositório
 
 _Please help reader navigate around describing how the repository is organized by providing links_
 * **Source code** is in the [StorageManagement](https://github.com/INF2021-PW-G20/StorageManagement).
 * 
 * Report chapters are in [doc folder](https://github.com/exemploTrabalho/report/doc).
 
-## Gallery
+## Galeria
 
 _Please provide a galery of the final result, with small images_
 A ![undwedw](/images/underConstruction.jpg) may be usefull to organize the images.
 
-## Technologies
+## Tecnologias
 
 _Indicate the technologies you have used in this assignment. Please provide links for the user to read more about those technologies._
 * HTML5 + CSS3
@@ -29,7 +29,7 @@ _Indicate the technologies you have used in this assignment. Please provide link
 * Postman
 * nodeJS
 
-### Frameworks and Libraries
+### <em>Frameworks</em> & <em>Libraries</em>
 
 _Did you use any aditional libraries? Describe them here._
 * Loopback4
@@ -50,9 +50,9 @@ _Please add at least on section (a file) per Chapter. But you can add more._
 * Chapter 4: [Presentation](doc/c4.md)
 
 ## Team
-* João Afonso
-* João Osório
-* Pedro Moreira
+* João Afonso - @Jafonso55
+* João Osório - @jlsOsorio
+* Pedro Moreira - @a108537 
 
 ## License
-* **Terms** is in the [GNU](License/License_Terms.txt).
+* **Termos de uso** disponíveis em [GNU](License/License_Terms.txt).
