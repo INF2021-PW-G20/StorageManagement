@@ -38,7 +38,7 @@ _As Frameworks & Libraries utilizadas neste projeto foram as seguintes._
 ## Relatório
 _O projeto está dividido nos seguintes capítulos._
 
-### Project presentation
+### Apresentação do projeto
 * Capítulo 1: [Apresentação do projeto](Docs/c1.md)
 ### Como iniciar a aplicação
 * Capítulo 2:[Iniciar aplicação](Docs/c2.md)
