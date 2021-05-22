@@ -1,27 +1,25 @@
 # Título do projeto
 
-Repository to host the project developed for 'some class', a fisrt year subject at SOMESCHOOL. Developed by Group ALPHA : [@MarcoOliveira](https://github.com/marcoamarooliveira), [add others].
+Repositório criado para alojar o código fonte do projeto realizado no âmbito da disciplica de programação web, [Instituto Superior da Maia](https://www.ismai.pt/pt).
 
 ## Breve descrição do tema
 
-O âmbito deste tema engloba a utilização de uma aplicação de apoio a manutenções de máquinas industriais, onde poderão ser armazenadas peças de substituição numa caixa, pertencente a uma prateleira, localizada num determinado corredor. 
-Quando forem retiradas ou adicionadas peças a este armazém, deverá ser feito um registo das alterações de stock, mantendo um histórico de transações do mesmo. Com a estrutura - criada em OpenAPI 3.0 - deverá ser possível executar alguns os métodos baseados numa arquitetura de serviços do tipo REST (GET, POST, PUT, DELETE, PATCH,…).
+O âmbito deste tema engloba a utilização de uma aplicação de apoio a manutenções de máquinas industriais, onde poderão ser armazenadas peças de substituição numa caixa, pertencente a uma prateleira, localizada num determinado corredor. Quando forem retiradas ou adicionadas peças a este armazém, deverá ser feito um registo das alterações de stock, mantendo um histórico de transações do mesmo. Com a estrutura - criada em OpenAPI 3.0 - deverá ser possível executar alguns os métodos baseados numa arquitetura de serviços do tipo REST (GET, POST, PUT, DELETE, PATCH,…).
 
 ## Organização do repositório
 
-_Please help reader navigate around describing how the repository is organized by providing links_
-* **Source code** is in the [StorageManagement](https://github.com/INF2021-PW-G20/StorageManagement).
-* 
-* Report chapters are in [doc folder](https://github.com/exemploTrabalho/report/doc).
+_Projeto constituido pelos seguinte repostórios principais_
+* **Código fonte** => [StorageManagement](https://github.com/INF2021-PW-G20/StorageManagement).
+* **Documentação** => [Docs](https://github.com/INF2021-PW-G20/StorageManagement/Docs).
 
 ## Galeria
 
-_Please provide a galery of the final result, with small images_
-A ![undwedw](/images/underConstruction.jpg) may be usefull to organize the images.
+_Work in progress_
+![WiP](/images/underConstruction.jpg)
 
 ## Tecnologias
 
-_Indicate the technologies you have used in this assignment. Please provide links for the user to read more about those technologies._
+_Tecnologias utilizadas neste projeto._
 * HTML5 + CSS3
 * Javascript
 * JSON
@@ -29,16 +27,16 @@ _Indicate the technologies you have used in this assignment. Please provide link
 * Postman
 * nodeJS
 
-### <em>Frameworks</em> & <em>Libraries</em>
+### _Frameworks_ & _Libraries_
 
-_Did you use any aditional libraries? Describe them here._
+_As Frameworks & Libraries utilizadas neste projeto foram as seguintes._
 * Loopback4
 * React
 * NodeJS
 * Bootstrap
 
-## Report
-_Please add at least on section (a file) per Chapter. But you can add more._
+## Relatório
+_O projeto está dividido pelo seguintes capítulos._
 
 ### Project presentation
 * Chapter 1: [Project presentation](doc/c1.md)
@@ -49,10 +47,10 @@ _Please add at least on section (a file) per Chapter. But you can add more._
 ### Presentation
 * Chapter 4: [Presentation](doc/c4.md)
 
-## Team
-* João Afonso - @Jafonso55
-* João Osório - @jlsOsorio
-* Pedro Moreira - @a108537 
+## Equipa de desenvolvimento
+* João Afonso - [@Jafonso55](https://github.com/Jafonso55)
+* João Osório - [@jlsOsorio](https://github.com/jlsOsorio)
+* Pedro Moreira - [@a108537](https://github.com/a108537)
 
-## License
+## Licença de utilização
 * **Termos de uso** disponíveis em [GNU](License/License_Terms.txt).
