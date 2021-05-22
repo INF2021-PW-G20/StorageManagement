@@ -36,20 +36,20 @@ _As Frameworks & Libraries utilizadas neste projeto foram as seguintes._
 * Bootstrap
 
 ## Relatório
-_O projeto está dividido pelo seguintes capítulos._
+_O projeto está dividido nos seguintes capítulos._
 
 ### Project presentation
-* Capítulo 1: [Project presentation](Docs/c1.md)
+* Capítulo 1: [Apresentação do projeto](Docs/c1.md)
 ### Como iniciar a aplicação
-* Capítulo 2:
+* Capítulo 2:[Iniciar aplicação](Docs/c2.md)
 ### Como testar a aplicação
-* Capítulo 3:
-### User Interface
-* Capítulo 4: [User Interface Prototype and Sitemap](doc/c2.md)
+* Capítulo 3:[Testar a aplicação](Docs/c3.md)
+### _User Interface_ (UI)
+* Capítulo 4: [_User Interface_ e Mapa do site](Docs/c4.md)
 ### O produto
-* Capitulo 5: [Product](doc/c3.md)
+* Capítulo 5: [Produto](Docs/c5.md)
 ### Apresentação
-* Chapter 6: [Presentation](doc/c4.md)
+* Capítulo 6: [Apresentação](Docs/c6.md)
 
 ## Equipa de desenvolvimento
 * João Afonso - [@Jafonso55](https://github.com/Jafonso55)
