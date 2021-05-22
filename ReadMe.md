@@ -17,7 +17,7 @@ _Please help reader navigate around describing how the repository is organized b
 ## Gallery
 
 _Please provide a galery of the final result, with small images_
-A [table](https://www.markdownguide.org/extended-syntax/#tables) may be usefull to organize the images.
+A ![undwedw](/images/underConstruction.jpg) may be usefull to organize the images.
 
 ## Technologies
 
