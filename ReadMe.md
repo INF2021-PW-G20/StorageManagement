@@ -49,7 +49,7 @@ _O projeto está dividido nos seguintes capítulos._
 ```
 
 #### Iniciar node server JS
-**NOTE**
+> !!! note 
 Deve navegar no terminar até à pasta onde se encontra o repositório do projeto antes de executar os serguintes comandos.
 ```bash
 
