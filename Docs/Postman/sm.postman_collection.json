@@ -1,0 +1,1733 @@
+{
+	"info": {
+		"_postman_id": "4e4650dc-aabb-4d1a-830f-9f72e8d4e8a5",
+		"name": "sm",
+		"description": "Storage Management of Maintenance Department\n\nContact Support:\n Name: jlsOsorio\n Email: joao_lso@hotmail.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "storages",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Storage by id",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"corridor\": 1,\n        \"shelf\": 1,\n        \"box\": 1,\n        \"name\": \"L111\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/storages/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"storages",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"corridor\": 37141769.74583867,\n    \"shelf\": -13227544.920130268,\n    \"box\": -93333141.89696251,\n    \"name\": \"labore in eiusmod sed tempor\",\n    \"id\": -81981646.43332851\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/storages/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"storages",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						},
+						{
+							"name": "Storage by id",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"corridor\": 1,\n        \"shelf\": 1,\n        \"box\": 1,\n        \"name\": \"L111\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/storages/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"storages",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": 69009836.66314197,\n    \"corridor\": 65681387.99863526,\n    \"shelf\": 92117302.22571188,\n    \"box\": -49829627.483146235,\n    \"name\": \"esse ea\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/storages/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"storages",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						},
+						{
+							"name": "Storage by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/storages/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"storages",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Storage model instance",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/storages/:id?filter=",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"storages",
+												":id"
+											],
+											"query": [
+												{
+													"key": "filter",
+													"value": ""
+												}
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"corridor\": -48939738.56429494,\n \"shelf\": -13095356.673524618,\n \"box\": -45644730.805403545,\n \"name\": \"in\",\n \"id\": 24766218.64810449,\n \"storageIO\": [\n  {\n   \"date_time\": \"1943-04-28T12:01:20.146Z\",\n   \"quantity\": 2327272.4130209535,\n   \"operation\": -3450758.8655520827,\n   \"id\": 95178212.91727024,\n   \"storage_id\": -67981265.53859344,\n   \"product_id\": 61033744.58341545\n  },\n  {\n   \"date_time\": \"1945-07-22T23:48:19.903Z\",\n   \"quantity\": -61968790.348867044,\n   \"operation\": -80442959.54353462,\n   \"id\": -28999367.917538434,\n   \"storage_id\": -8966279.203932762,\n   \"product_id\": -76595819.25193125\n  }\n ],\n \"storagesPS\": [\n  {\n   \"id\": 17485169.11374414,\n   \"storage_id\": 50494893.120137215,\n   \"product_id\": -75238826.55681087\n  },\n  {\n   \"id\": -52777619.70424799,\n   \"storage_id\": 29866715.071283072,\n   \"product_id\": 73610987.90257001\n  }\n ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Storage by id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/storages/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"storages",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/storages/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"storages",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						},
+						{
+							"name": "Products in a storage",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/storages/:id/productstorages",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"storages",
+										":id",
+										"productstorages"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Array of Storage has many Productstorage",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/storages/:id/productstorages?filter=",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"storages",
+												":id",
+												"productstorages"
+											],
+											"query": [
+												{
+													"key": "filter",
+													"value": ""
+												}
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n {\n  \"id\": 6868360.399663717,\n  \"storage_id\": -12784309.77188237,\n  \"product_id\": 83332724.21331438\n },\n {\n  \"id\": -36048850.55425715,\n  \"storage_id\": 88973371.52436236,\n  \"product_id\": -49043182.574678615\n }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Storage",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"corridor\": 10,\n    \"shelf\": 11,\n    \"box\": 12,\n    \"name\": \"Excepteur sunt id nulla\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/storages",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"storages"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Storage model instance",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"corridor\": 10638394.602823228,\n    \"shelf\": -92929656.93036708,\n    \"box\": -78000814.8875401,\n    \"name\": \"velit amet nulla\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/storages",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"storages"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"corridor\": 37141769.74583867,\n \"shelf\": -13227544.920130268,\n \"box\": -93333141.89696251,\n \"name\": \"labore in eiusmod sed tempor\",\n \"id\": -81981646.43332851\n}"
+						}
+					]
+				},
+				{
+					"name": "Storages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/storages",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"storages"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Array of Storage model instances",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/storages?filter=",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"storages"
+									],
+									"query": [
+										{
+											"key": "filter",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n {\n  \"corridor\": -81897465.08984289,\n  \"shelf\": 4672793.806698918,\n  \"box\": 1929241.2223124206,\n  \"name\": \"ad in\",\n  \"id\": 1795851.2619981319,\n  \"storageIO\": [\n   {\n    \"date_time\": \"1989-08-15T14:39:26.882Z\",\n    \"quantity\": 9163952.138316095,\n    \"operation\": 56033793.74850553,\n    \"id\": -99746590.4611556,\n    \"storage_id\": 70648698.15994993,\n    \"product_id\": 73507810.29185179\n   },\n   {\n    \"date_time\": \"1943-03-21T21:54:32.488Z\",\n    \"quantity\": -76623178.71421903,\n    \"operation\": 24565584.2003278,\n    \"id\": 36812036.8398979,\n    \"storage_id\": -5194538.650039732,\n    \"product_id\": -42254508.52850714\n   }\n  ],\n  \"storagesPS\": [\n   {\n    \"id\": -16942068.01810254,\n    \"storage_id\": 67948419.58804473,\n    \"product_id\": 69659942.74279645\n   },\n   {\n    \"id\": 91842095.96365306,\n    \"storage_id\": -45158013.80940858,\n    \"product_id\": -16138728.595876768\n   }\n  ]\n },\n {\n  \"corridor\": -78214949.39517048,\n  \"shelf\": 83956936.24701267,\n  \"box\": -48101438.33668605,\n  \"name\": \"irure minim officia\",\n  \"id\": -59180725.37535033,\n  \"storageIO\": [\n   {\n    \"date_time\": \"1989-12-01T00:11:19.457Z\",\n    \"quantity\": -22702663.693591684,\n    \"operation\": -13254.852532491088,\n    \"id\": 91255693.41634166,\n    \"storage_id\": 7816054.225953862,\n    \"product_id\": -6588981.676731363\n   },\n   {\n    \"date_time\": \"1962-05-08T20:38:28.556Z\",\n    \"quantity\": 40032236.95633912,\n    \"operation\": -79041867.71371728,\n    \"id\": -38959963.44092714,\n    \"storage_id\": -10274581.831577033,\n    \"product_id\": -5398971.330722362\n   }\n  ],\n  \"storagesPS\": [\n   {\n    \"id\": -3659283.9945759773,\n    \"storage_id\": 54881605.88726637,\n    \"product_id\": 89639795.56481963\n   },\n   {\n    \"id\": -76820523.37554958,\n    \"storage_id\": 7857363.169659853,\n    \"product_id\": 61906309.50877836\n   }\n  ]\n }\n]"
+						}
+					]
+				},
+				{
+					"name": "Number of storages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/storages/count",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"storages",
+								"count"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Storage model count",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/storages/count?where=",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"storages",
+										"count"
+									],
+									"query": [
+										{
+											"key": "where",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"count\": 7759512.0574383885\n}"
+						}
+					]
+				},
+				{
+					"name": "Storages by corridor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/storages?filter={\"where\": {\"corridor\":{{corridorNumber}}}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"storages"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "{\"where\": {\"corridor\":{{corridorNumber}}}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Storages by shelf",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/storages?filter={\"where\": {\"corridor\":{{corridorNumber}},\"shelf\":{{shelfNumber}}}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"storages"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "{\"where\": {\"corridor\":{{corridorNumber}},\"shelf\":{{shelfNumber}}}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Storages by box",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/storages?filter={\"where\": {\"corridor\":{{corridorNumber}},\"shelf\":{{shelfNumber}}, \"box\":{{boxNumber}}}}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"storages"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "{\"where\": {\"corridor\":{{corridorNumber}},\"shelf\":{{shelfNumber}}, \"box\":{{boxNumber}}}}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Product by id",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"proident aute mollit\",\n    \"type\": \"qui consequat sed dolore\",\n    \"uprice\": 100,\n    \"stock\": 0\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"ad elit eu\",\n    \"type\": \"ea anim esse\",\n    \"uprice\": 90596377.54971305,\n    \"id\": -57846427.01861391,\n    \"stock\": 93486362.43121815\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/products/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						},
+						{
+							"name": "Product by id",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"ullamco enim do\",\n    \"type\": \"i\",\n    \"uprice\": 100,\n    \"stock\": 0\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": -10418685.897534892,\n    \"name\": \"qui enim\",\n    \"type\": \"culpa nostrud ut\",\n    \"uprice\": -12582083.717850164,\n    \"stock\": -28141324.356056646\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/products/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						},
+						{
+							"name": "Product by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/products/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Product model instance",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/products/:id?filter=",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":id"
+											],
+											"query": [
+												{
+													"key": "filter",
+													"value": ""
+												}
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"name\": \"ipsum enim Ut commodo\",\n \"type\": \"fugiat ad magna\",\n \"uprice\": 53405042.720564425,\n \"id\": -40623731.597693525,\n \"stock\": -6038912.970381156,\n \"productIO\": [\n  {\n   \"date_time\": \"1970-04-09T05:53:15.155Z\",\n   \"quantity\": 27133421.289706573,\n   \"operation\": -89310768.8582627,\n   \"id\": 89671013.33226654,\n   \"storage_id\": -99343885.27792595,\n   \"product_id\": -9287107.3094614\n  },\n  {\n   \"date_time\": \"1948-02-03T08:35:08.222Z\",\n   \"quantity\": -56872500.10817859,\n   \"operation\": 19209151.125858933,\n   \"id\": -86408745.34862189,\n   \"storage_id\": -76917318.62543753,\n   \"product_id\": 30192197.939740866\n  }\n ],\n \"productPS\": [\n  {\n   \"id\": 33708586.84242837,\n   \"storage_id\": 4277501.150418624,\n   \"product_id\": -83859259.98816326\n  },\n  {\n   \"id\": 55838190.354364336,\n   \"storage_id\": -92995395.57004444,\n   \"product_id\": -8820429.543058202\n  }\n ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Product by id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/products/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/products/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						},
+						{
+							"name": "Inputoutputs by product",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/products/:id/inputoutputs",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products",
+										":id",
+										"inputoutputs"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Array of Product has many Inputoutput",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/products/:id/inputoutputs?filter=",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":id",
+												"inputoutputs"
+											],
+											"query": [
+												{
+													"key": "filter",
+													"value": ""
+												}
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n {\n  \"date_time\": \"1990-04-15T22:15:02.423Z\",\n  \"quantity\": -46559393.816773966,\n  \"operation\": 37153586.46615344,\n  \"id\": 98520474.74677718,\n  \"storage_id\": -2074493.4364768714,\n  \"product_id\": -72047113.47009392\n },\n {\n  \"date_time\": \"1987-06-23T00:41:41.447Z\",\n  \"quantity\": 88323823.23902026,\n  \"operation\": 31773309.717523724,\n  \"id\": -91633532.19892567,\n  \"storage_id\": 18248793.341916025,\n  \"product_id\": 37107479.06482726\n }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"et aliquip ea non labore\",\n    \"type\": \"exercitation id\",\n    \"uprice\": 100,\n    \"stock\": 0\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/products",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Product model instance",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"officia sunt mollit in\",\n    \"type\": \"commodo anim exercitation\",\n    \"uprice\": -67643630.67975777,\n    \"stock\": 88941285.23825184\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"name\": \"ad elit eu\",\n \"type\": \"ea anim esse\",\n \"uprice\": 90596377.54971305,\n \"id\": -57846427.01861391,\n \"stock\": 93486362.43121815\n}"
+						}
+					]
+				},
+				{
+					"name": "Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Array of Product model instances",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/products?filter=",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									],
+									"query": [
+										{
+											"key": "filter",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n {\n  \"name\": \"qui cillum minim incididunt dolor\",\n  \"type\": \"est Excepteur occaeca\",\n  \"uprice\": 84819305.99936861,\n  \"id\": -88704201.19938242,\n  \"stock\": 21842882.404125422,\n  \"productIO\": [\n   {\n    \"date_time\": \"1953-01-18T19:21:05.869Z\",\n    \"quantity\": -31317880.30935864,\n    \"operation\": -14327703.66481626,\n    \"id\": 29651797.98184581,\n    \"storage_id\": -3804426.210869938,\n    \"product_id\": -42159684.01033079\n   },\n   {\n    \"date_time\": \"1996-03-31T09:58:26.765Z\",\n    \"quantity\": 58332882.91721001,\n    \"operation\": -57194579.88656642,\n    \"id\": 75436515.38788202,\n    \"storage_id\": -37864946.95653766,\n    \"product_id\": 62384496.45265186\n   }\n  ],\n  \"productPS\": [\n   {\n    \"id\": 22242282.972137064,\n    \"storage_id\": -95349641.32843822,\n    \"product_id\": -31299197.090259105\n   },\n   {\n    \"id\": -60463878.89242468,\n    \"storage_id\": -19668905.218677506,\n    \"product_id\": -25216701.34308964\n   }\n  ]\n },\n {\n  \"name\": \"cupidatat irure\",\n  \"type\": \"id aliqua deserunt anim\",\n  \"uprice\": 2519431.3015901595,\n  \"id\": -48674081.96305463,\n  \"stock\": -27650477.073185712,\n  \"productIO\": [\n   {\n    \"date_time\": \"2003-02-04T10:29:02.186Z\",\n    \"quantity\": 24903316.040415734,\n    \"operation\": -89889351.86451857,\n    \"id\": 10053755.08754152,\n    \"storage_id\": 63152240.72283563,\n    \"product_id\": -30624734.873466864\n   },\n   {\n    \"date_time\": \"2005-01-11T07:33:36.605Z\",\n    \"quantity\": 77239257.73591605,\n    \"operation\": -88493115.9286876,\n    \"id\": 57825221.65331927,\n    \"storage_id\": 13046511.407460004,\n    \"product_id\": 74093390.46779922\n   }\n  ],\n  \"productPS\": [\n   {\n    \"id\": -73568236.5836114,\n    \"storage_id\": -44095667.20437858,\n    \"product_id\": 95899618.73546407\n   },\n   {\n    \"id\": 73812514.15487391,\n    \"storage_id\": -58888236.02552171,\n    \"product_id\": -13546224.33326082\n   }\n  ]\n }\n]"
+						}
+					]
+				},
+				{
+					"name": "Number of products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products/count",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								"count"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Product model count",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/products/count?where=",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products",
+										"count"
+									],
+									"query": [
+										{
+											"key": "where",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"count\": 7759512.0574383885\n}"
+						}
+					]
+				},
+				{
+					"name": "Product by type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products?filter={\"where\":{\"type\":\"{{productType}}\"}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "{\"where\":{\"type\":\"{{productType}}\"}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Products by minimum price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products?filter={\"where\": {\"uprice\":{\"gte\":{{minPrice}}}}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "{\"where\": {\"uprice\":{\"gte\":{{minPrice}}}}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Products by maximum price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products?filter={\"where\": {\"uprice\":{\"lte\":{{maxPrice}}}}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "{\"where\": {\"uprice\":{\"lte\":{{maxPrice}}}}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Products with low stock",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products?filter={\"where\": {\"stock\": {\"lte\":1}}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "{\"where\": {\"stock\": {\"lte\":1}}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "productstorages",
+			"item": [
+				{
+					"name": "Productstorages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/productstorages",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"productstorages"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Array of Productstorage model instances",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/productstorages?filter=",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"productstorages"
+									],
+									"query": [
+										{
+											"key": "filter",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n {\n  \"id\": 80426101.75892144,\n  \"storage_id\": 25582078.631872743,\n  \"product_id\": 48947024.4144949\n },\n {\n  \"id\": -40084072.05465967,\n  \"storage_id\": -75572150.94295837,\n  \"product_id\": 311568.55782578886\n }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "inputoutputs",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Inputoutput by id",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date_time\": \"1988-11-17T04:45:42.786Z\",\n    \"quantity\": 1,\n    \"operation\": 1,\n    \"storage_id\": 1,\n    \"product_id\": 1\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/inputoutputs/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inputoutputs",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"date_time\": \"1951-05-22T15:42:03.000Z\",\n    \"quantity\": -93757917.88300915,\n    \"operation\": 15623134.475159124,\n    \"id\": -1858012.010284245,\n    \"storage_id\": 82037218.41942447,\n    \"product_id\": -22686199.264607996\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/inputoutputs/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inputoutputs",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						},
+						{
+							"name": "Inputoutput by id",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date_time\": \"1988-11-17T04:45:42.786Z\",\n    \"quantity\": 1,\n    \"operation\": 1,\n    \"storage_id\": 1,\n    \"product_id\": 1\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/inputoutputs/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inputoutputs",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": 7720374.0154327005,\n    \"date_time\": \"1963-07-17T11:33:12.343Z\",\n    \"quantity\": 99618882.24975362,\n    \"operation\": 94902933.94424465,\n    \"storage_id\": -34959748.35018796,\n    \"product_id\": -56941456.62623091\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/inputoutputs/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inputoutputs",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						},
+						{
+							"name": "Inputoutput by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/inputoutputs/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inputoutputs",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Inputoutput model instance",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/inputoutputs/:id?filter=",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inputoutputs",
+												":id"
+											],
+											"query": [
+												{
+													"key": "filter",
+													"value": ""
+												}
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"date_time\": \"2012-04-21T07:50:49.807Z\",\n \"quantity\": -80161189.41836141,\n \"operation\": -3866566.4846449792,\n \"id\": -66055790.55282478,\n \"storage_id\": 24929603.485726565,\n \"product_id\": -49458455.45007051\n}"
+								}
+							]
+						},
+						{
+							"name": "Inputoutput by id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/inputoutputs/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inputoutputs",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/inputoutputs/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inputoutputs",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Inputoutput",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"date_time\": \"1978-04-17T20:10:17.973Z\",\n    \"quantity\": 1,\n    \"operation\": 1,\n    \"storage_id\": 1,\n    \"product_id\": 1\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/inputoutputs",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"inputoutputs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Inputoutput model instance",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date_time\": \"2018-09-19T23:27:29.367Z\",\n    \"quantity\": 56524767.865354955,\n    \"operation\": -66818719.19026445,\n    \"storage_id\": 21102854.808713272,\n    \"product_id\": 12606329.018365338\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/inputoutputs",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inputoutputs"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"date_time\": \"1951-05-22T15:42:03.000Z\",\n \"quantity\": -93757917.88300915,\n \"operation\": 15623134.475159124,\n \"id\": -1858012.010284245,\n \"storage_id\": 82037218.41942447,\n \"product_id\": -22686199.264607996\n}"
+						}
+					]
+				},
+				{
+					"name": "Inputoutputs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/inputoutputs",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"inputoutputs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Array of Inputoutput model instances",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/inputoutputs?filter=",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inputoutputs"
+									],
+									"query": [
+										{
+											"key": "filter",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n {\n  \"date_time\": \"2017-08-26T21:50:41.673Z\",\n  \"quantity\": 94262756.09452897,\n  \"operation\": -19805513.722660348,\n  \"id\": 3142392.5529480428,\n  \"storage_id\": -46086414.279888555,\n  \"product_id\": -94347303.6327151\n },\n {\n  \"date_time\": \"1997-12-15T04:41:14.906Z\",\n  \"quantity\": 51758835.82099989,\n  \"operation\": -72011232.42822698,\n  \"id\": -31748280.523449957,\n  \"storage_id\": 96157605.07014644,\n  \"product_id\": -13024685.189425483\n }\n]"
+						}
+					]
+				},
+				{
+					"name": "Number of inputoutputs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/inputoutputs/count",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"inputoutputs",
+								"count"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Inputoutput model count",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/inputoutputs/count?where=",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inputoutputs",
+										"count"
+									],
+									"query": [
+										{
+											"key": "where",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"count\": 7759512.0574383885\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Ping Controller.ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/ping",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Ping Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/ping",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ping"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"greeting\": \"in ipsum minim elit aute\",\n \"date\": \"cupi\",\n \"url\": \"sunt Duis mollit\",\n \"headers\": {\n  \"Content-Type\": \"irure ad reprehenderit\"\n }\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://127.0.0.1:3000",
+			"type": "string"
+		}
+	]
+}
