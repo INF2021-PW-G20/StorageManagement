@@ -24,7 +24,6 @@ _Tecnologias utilizadas neste projeto._
 * Javascript
 * JSON
 * MariaDB
-* Postman
 * nodeJS
 
 ### _Frameworks_ & _Libraries_
@@ -40,10 +39,15 @@ _O projeto está dividido nos seguintes capítulos._
 
 ### Apresentação do projeto
 * Capítulo 1: [Apresentação do projeto](Docs/c1.md)
-### Como iniciar a aplicação
+### Como executar o projeto
+
+#### Clonar repositório
+```bash
+
+    npm install
+
+```
 * Capítulo 2:[Iniciar aplicação](Docs/c2.md)
-### Como testar a aplicação
-* Capítulo 3:[Testar a aplicação](Docs/c3.md)
 ### _User Interface_ (UI)
 * Capítulo 4: [_User Interface_ e Mapa do site](Docs/c4.md)
 ### O produto
