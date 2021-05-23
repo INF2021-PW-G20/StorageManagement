@@ -17,6 +17,10 @@ _Projeto constituido pelos seguinte repostórios principais_
 _Work in progress_<br/>
 ![](/images/underConstruction.jpg)
 
+## Modelo conceptual
+
+![](/images/Concept_diagram.jpg)
+
 ## Tecnologias
 
 _Tecnologias utilizadas neste projeto._
