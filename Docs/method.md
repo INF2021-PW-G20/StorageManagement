@@ -1,5 +1,7 @@
 # Métodos implementados no projeto
 
+{{baseUrl}}=>http://127.0.0.1:3000
+
 ## STORAGES
 
 **GET** STORAGES
@@ -288,8 +290,6 @@ _params_
 Eliminar um produto específico a partir do id.
 
 <hr/>
-
-#### INPUTOUTPUTS
 
 **GET** INPUTOUTPUTS BY PRODUCT
 ```bash

@@ -1,4 +1,4 @@
-# Título do projeto
+# Storage Management
 
 Repositório criado para alojar o código fonte do projeto realizado no âmbito da disciplica de programação web, [Instituto Superior da Maia](https://www.ismai.pt/pt).
 
@@ -62,6 +62,13 @@ _O projeto está dividido nos seguintes capítulos._
     npm start
 
 ```
+
+### Aceder ao link
+
+```bash
+    http://127.0.0.1:3000
+```
+
 ### Métodos do projeto
 * [Métodos](Docs/method.md)
 
