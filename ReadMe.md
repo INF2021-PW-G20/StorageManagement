@@ -19,7 +19,7 @@ _Work in progress_<br/>
 
 ## Modelo conceptual
 
-![](/images/Concept_diagram.jpg)
+![](/images/Concept_diagram.png)
 
 ## Tecnologias
 
