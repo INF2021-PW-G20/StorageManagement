@@ -49,8 +49,7 @@ _O projeto está dividido nos seguintes capítulos._
 ```
 
 #### Iniciar node server JS
-> !!! note 
-Deve navegar no terminar até à pasta onde se encontra o repositório do projeto antes de executar os serguintes comandos.
+> Deve navegar no terminar até à pasta onde se encontra o repositório do projeto antes de executar os serguintes comandos.
 ```bash
 
     npm install
@@ -75,4 +74,4 @@ Deve navegar no terminar até à pasta onde se encontra o repositório do projet
 * Pedro Moreira - [@a108537](https://github.com/a108537)
 
 ## Licença de utilização
-* **Termos de uso** disponíveis em [GNU](License/License_Terms.md).
+* **Termos de uso** disponíveis em [MIT](LICENSE.md).
