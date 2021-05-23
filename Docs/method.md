@@ -1,12 +1,7 @@
 # Métodos implementados no projeto
 
-## Título método
-
-### Product
-```diff
-+GET```
-Inserir produto
-<span style="color: green">GET </span> Inserir produto
+## Product
+**POST** Inserir produto
 ```bash
 URL
 ```
