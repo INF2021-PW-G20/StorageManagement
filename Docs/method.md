@@ -1,15 +1,58 @@
 # Métodos implementados no projeto
 
-## Product
-**POST** Inserir produto
+## STORAGES
+
+**GET** STORAGES
 ```bash
-URL
+{{baseUrl}}/storages
 ```
-Text example
+Mostrar todos os locais de armazenamento.
 
 <hr/>
 
-<span style="color: red">GET </span> Inserir produto
+**GET** NUMBER OF STORAGES
+```bash
+{{baseUrl}}/storages/count
+```
+Mostra o número de locais de armazenamento existentes.
+
+<hr/>
+
+**GET** STORAGES BY CORRIDOR
+```bash
+{{baseUrl}}/storages?filter={"where": {"corridor":{{corridorNumber}}}}
+```
+Mostra os locais de armazenamento existentes de um corredor específico.
+{{corridorNumber}} => número do corredor a filtrar.
+
+<hr/>
+
+**GET** STORAGES BY SHELF
+```bash
+{{baseUrl}}/storages?filter={"where": {"shelf":{{shelfNumber}}}}
+```
+Mostra os locais de armazenamento existentes de uma prateleira específica.
+{{shelfNumber}} => número do prateleira a filtrar.
+
+<hr/>
+
+**GET** STORAGES BY BOX
+```bash
+{{baseUrl}}/storages?filter={"where": {"shelf":{{shelfNumber}}}}
+```
+Mostra os locais de armazenamento existentes de uma prateleira específica.
+{{shelfNumber}} => número do prateleira a filtrar.
+
+<hr/>
+
+## PRODUCTS
+
+## PRODUCTSTORAGES
+
+## INPUTOUTPUTS
+
+
+Inserir produto
 ```bash
 URL
 ```
