@@ -52,19 +52,33 @@ Mostra os locais de armazenamento existentes de uma caixa específica.
 ```bash
 {{baseUrl}}/storages
 ```
+_body_
 ```JSON
 {
-    "corridor": 29599195.792699322,
-    "shelf": -55710077.04655448,
-    "box": 39953130.833701074,
+    "corridor": 1,
+    "shelf": 1,
+    "box": 1,
     "name": "Excepteur sunt id nulla"
 }
 
 ```
-Mostra os locais de armazenamento existentes de uma caixa específica.
-
+Inserir uma nova storage
 
 <hr/>
+
+### STORAGES/:ID
+
+**GET** STORAGE BY ID
+```bash
+{{baseUrl}}/storages/:id
+```
+
+![WiP](/images/storagebyid.png)
+
+Mostrar as storages para um id específico.
+
+<hr/>
+
 
 ## PRODUCTS
 
