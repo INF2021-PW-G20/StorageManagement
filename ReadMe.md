@@ -44,7 +44,21 @@ _O projeto está dividido nos seguintes capítulos._
 #### Clonar repositório
 ```bash
 
+    git clone https://github.com/INF2021-PW-G20/StorageManagement
+
+```
+
+#### Iniciar node server JS
+**NOTE**
+Deve navegar no terminar até à pasta onde se encontra o repositório do projeto antes de executar os serguintes comandos.
+```bash
+
     npm install
+
+```
+```bash
+
+    npm start
 
 ```
 * Capítulo 2:[Iniciar aplicação](Docs/c2.md)
