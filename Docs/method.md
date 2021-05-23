@@ -73,7 +73,7 @@ Inserir uma nova storage
 {{baseUrl}}/storages/:id
 ```
 
-![WiP](/images/storagebyid.png)
+![](/images/Storagebyid.png)
 
 Mostrar as storages para um id específico.
 
