@@ -79,7 +79,6 @@ Mostrar uma storage pelo seu id.
 
 <hr/>
 
-
 **GET** PRODUCTS IN A STORAGE
 ```bash
 {{baseUrl}}/storages/:id/productstorages
