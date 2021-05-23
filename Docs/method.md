@@ -3,7 +3,7 @@
 ## Título método
 
 ### Product
-
+<font color="red">This is some text!</font>
 <span style="color: green">GET </span> Inserir produto
 ```bash
 URL
