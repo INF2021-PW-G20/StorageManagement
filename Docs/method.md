@@ -29,19 +29,40 @@ Mostra os locais de armazenamento existentes de um corredor específico.
 
 **GET** STORAGES BY SHELF
 ```bash
-{{baseUrl}}/storages?filter={"where": {"shelf":{{shelfNumber}}}}
+{{baseUrl}}/storages?filter={"where": {"corridor":{{corridorNumber}},"shelf":{{shelfNumber}}}}
 ```
 Mostra os locais de armazenamento existentes de uma prateleira específica.
-{{shelfNumber}} => número do prateleira a filtrar.
+{{shelfNumber}} => número da prateleira a filtrar.
+{{corridorNumber}} => número do corredor a filtrar.
 
 <hr/>
 
 **GET** STORAGES BY BOX
 ```bash
-{{baseUrl}}/storages?filter={"where": {"shelf":{{shelfNumber}}}}
+{{baseUrl}}/storages?filter={"where": {"corridor":{{corridorNumber}},"shelf":{{shelfNumber}}, "box":{{boxNumber}}}}}
 ```
-Mostra os locais de armazenamento existentes de uma prateleira específica.
-{{shelfNumber}} => número do prateleira a filtrar.
+Mostra os locais de armazenamento existentes de uma caixa específica.
+{{shelfNumber}} => número da prateleira a filtrar.
+{{corridorNumber}} => número do corredor a filtrar.
+{{boxNumber}} => número da caixa a filtrar
+
+<hr/>
+
+**POST** STORAGE
+```bash
+{{baseUrl}}/storages
+```
+```JSON
+{
+    "corridor": 29599195.792699322,
+    "shelf": -55710077.04655448,
+    "box": 39953130.833701074,
+    "name": "Excepteur sunt id nulla"
+}
+
+```
+Mostra os locais de armazenamento existentes de uma caixa específica.
+
 
 <hr/>
 
