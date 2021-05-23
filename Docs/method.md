@@ -3,7 +3,9 @@
 ## Título método
 
 ### Product
-`r colorize("some words in red", "red")`
+```diff
++GET```
+Inserir produto
 <span style="color: green">GET </span> Inserir produto
 ```bash
 URL
