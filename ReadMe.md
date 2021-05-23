@@ -74,4 +74,4 @@ _O projeto está dividido nos seguintes capítulos._
 * Pedro Moreira - [@a108537](https://github.com/a108537)
 
 ## Licença de utilização
-* **Termos de uso** disponíveis em [MIT](LICENSE.md).
+* **Termos de uso** disponíveis em [MIT](LICENSE).

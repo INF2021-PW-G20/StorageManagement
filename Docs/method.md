@@ -73,6 +73,7 @@ Inserir uma nova storage
 ```
 _params_
 >id
+
 ![](/images/Storagebyid.png)
 
 Mostrar uma storage pelo seu id.
@@ -85,6 +86,7 @@ Mostrar uma storage pelo seu id.
 ```
 _params_
 >id
+
 ![](/images/Storagebyid.png)
 
 Mostrar os products numa determinada storage.
@@ -98,6 +100,7 @@ Mostrar os products numa determinada storage.
 
 _params_
 >id
+
 ![](/images/Storagebyid.png)
 
 ```JSON
@@ -119,6 +122,7 @@ Alterar uma storage específica a partir do id.
 
 _params_
 >id
+
 ![](/images/Storagebyid.png)
 
 ```JSON
@@ -223,6 +227,7 @@ Inserir um novo produto.
 ```
 _params_
 >id
+
 ![](/images/Storagebyid.png)
 
 Mostrar um produto pelo seu id.
@@ -236,6 +241,7 @@ Mostrar um produto pelo seu id.
 
 _params_
 >id
+
 ![](/images/Storagebyid.png)
 
 ```JSON
@@ -257,6 +263,7 @@ Alterar um produto específico a partir do id.
 
 _params_
 >id
+
 ![](/images/Storagebyid.png)
 
 ```JSON
@@ -290,6 +297,7 @@ Eliminar um produto específico a partir do id.
 ```
 _params_
 >id
+
 ![](/images/Storagebyid.png)
 
 Mostrar os movimentos de um produto.
@@ -366,6 +374,7 @@ Inserir movimento novo.
 
 _params_
 >id
+
 ![](/images/Storagebyid.png)
 
 Mostrar movimento através do seu id.
@@ -414,6 +423,7 @@ Alterar movimento existente.
 
 _params_
 >id
+
 ![](/images/Storagebyid.png)
 
 Alterar movimento existente.
@@ -427,6 +437,7 @@ Alterar movimento existente.
 
 _params_
 >id
+
 ![](/images/Storagebyid.png)
 
 Eliminar movimento existente.
