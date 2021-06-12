@@ -4,15 +4,36 @@ import {InputoutputList} from "./InputoutputList";
 import {StorageList} from "./StorageList";
 import {ProductList} from "./ProductList";
 import {ProductstorageList} from "./ProductstorageList";
+import inout from "@material-ui/icons/SyncAlt";
+import storage from "@material-ui/icons/LocalShipping";
+import product from "@material-ui/icons/PostAdd";
+
+
 
 const dataProvider = lb4Provider("http://localhost:3000");
 
 const App = () => (
   <Admin dataProvider={dataProvider}>
-  <Resource name="storages" list={StorageList} edit={EditGuesser} />
-  <Resource name="products" list={ProductList} />
-  <Resource name="inputoutputs" list={InputoutputList} />
-  <Resource name="productstorages" list={ProductstorageList} />
+  <Resource 
+    name="storages" 
+    list={StorageList} 
+    edit={EditGuesser} 
+    icon={storage}
+  />
+  <Resource 
+    name="products"
+    list={ProductList}
+    icon={product}
+  />
+  <Resource 
+    name="inputoutputs"
+    list={InputoutputList}
+    icon={inout}
+  />
+  <Resource 
+    name="productstorages" 
+    list={ProductstorageList} 
+  />
   </Admin>
   );
 
