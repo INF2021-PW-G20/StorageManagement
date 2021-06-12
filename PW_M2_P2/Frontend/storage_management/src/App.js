@@ -1,12 +1,18 @@
-import { Admin, Resource, ListGuesser, EditGuesser, EditButton } from "react-admin";
+import { Admin, Resource, EditGuesser, EditButton } from "react-admin";
 import lb4Provider from "react-admin-lb4";
+import {InputoutputList} from "./InputoutputList";
+import {StorageList} from "./StorageList";
+import {ProductList} from "./ProductList";
+import {ProductstorageList} from "./ProductstorageList";
 
 const dataProvider = lb4Provider("http://localhost:3000");
 
 const App = () => (
   <Admin dataProvider={dataProvider}>
-  <Resource name="storages" list={ListGuesser} edit={EditGuesser} />
-  <Resource name="products" list={ListGuesser} />
+  <Resource name="storages" list={StorageList} edit={EditGuesser} />
+  <Resource name="products" list={ProductList} />
+  <Resource name="inputoutputs" list={InputoutputList} />
+  <Resource name="productstorages" list={ProductstorageList} />
   </Admin>
   );
 
