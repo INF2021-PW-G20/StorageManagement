@@ -1,4 +1,4 @@
-import {List, TextField, Datagrid, NumberField} from "react-admin";
+import {List, TextField, Datagrid, NumberField, EditButton} from "react-admin";
 
 export const StorageList = props => (
     <List {...props}>
@@ -8,6 +8,7 @@ export const StorageList = props => (
             <NumberField source="shelf" />
             <NumberField source="box" />
             <TextField source="name" />
+            <EditButton/>
         </Datagrid>
     </List>
 );
