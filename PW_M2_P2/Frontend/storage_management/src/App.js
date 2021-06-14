@@ -1,7 +1,8 @@
-import { Admin, Resource, EditGuesser } from "react-admin";
+import { Admin, Resource, ShowGuesser } from "react-admin";
 import lb4Provider from "react-admin-lb4";
 import {InputoutputList} from "./InputoutputList";
 import {InputoutputEdit} from "./InputoutputEdit";
+import {InputoutputShow} from "./InputoutputShow";
 import {StorageList} from "./StorageList";
 import {StorageEdit} from "./StorageEdit";
 import {ProductList} from "./ProductList";
@@ -34,6 +35,7 @@ const App = () => (
     name="inputoutputs"
     list={InputoutputList}
     edit={InputoutputEdit}
+    show={InputoutputShow}
     icon={inout}
   />
   <Resource 
