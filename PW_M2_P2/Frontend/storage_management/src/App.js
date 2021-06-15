@@ -1,8 +1,7 @@
-import { Admin, Resource, ShowGuesser } from "react-admin";
+import { Admin, ListGuesser, Login, Logout, Resource } from "react-admin";
 import lb4Provider from "react-admin-lb4";
 import {InputoutputList} from "./InputoutputList";
 import {InputoutputEdit} from "./InputoutputEdit";
-import {InputoutputShow} from "./InputoutputShow";
 import {StorageList} from "./StorageList";
 import {StorageEdit} from "./StorageEdit";
 import {ProductList} from "./ProductList";
@@ -11,21 +10,39 @@ import {ProductstorageList} from "./ProductstorageList";
 import inout from "@material-ui/icons/SyncAlt";
 import storage from "@material-ui/icons/LocalShipping";
 import product from "@material-ui/icons/PostAdd";
-import { theme } from "./theme";
+import { StorageCreate } from "./StorageCreate";
+import { StorageShow } from "./StorageShow";
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import Dashboard from './Dashboard';
 
+const MyLogoutButton = props => <Logout {...props} icon={<ExitToAppIcon/>} />;
 
 
 const dataProvider = lb4Provider("http://localhost:3000");
 
-const App = () => (
-  <Admin dataProvider={dataProvider}
-  theme={theme}
-  >
+const MyLoginPage = () => (
+  <Login
+    backgroundImage="https://source.unsplash.com/random/1600x900/daily"
+  />
+)
 
-0  <Resource 
-    name="storages" 
+
+
+const App = () => {
+  console.log(InputoutputList())  
+return (
+  <Admin 
+    logoutButton={MyLogoutButton}
+    loginPage={MyLoginPage}
+    dataProvider={dataProvider}
+    dashboard={Dashboard}>
+
+  <Resource 
+    name="storages"
+    create={StorageCreate} 
     list={StorageList} 
-    edit={StorageEdit} 
+    edit={StorageEdit}
+    show={StorageShow}
     icon={storage}
   />
   <Resource 
@@ -34,21 +51,20 @@ const App = () => (
     edit={ProductEdit}
     icon={product}
   />
+  
   <Resource 
     name="inputoutputs"
     list={InputoutputList}
     edit={InputoutputEdit}
-    show={InputoutputShow}
     icon={inout}
   />
   <Resource 
     name="productstorages" 
     list={ProductstorageList} 
-    edit={ProductstorageList}
   />
   </Admin>
   );
-
+}
 // import logo from './logo.svg';
 // import './App.css';
 
