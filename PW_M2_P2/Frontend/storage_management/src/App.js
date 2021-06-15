@@ -1,19 +1,24 @@
-import { Admin, ListGuesser, Login, Logout, Resource } from "react-admin";
+import { Admin, Login, Logout, Resource } from "react-admin";
 import lb4Provider from "react-admin-lb4";
 import {InputoutputList} from "./InputoutputList";
 import {InputoutputEdit} from "./InputoutputEdit";
+import {InputoutputShow} from "./InputoutputShow";
+import {InputoutputCreate} from "./InputoutputCreate";
 import {StorageList} from "./StorageList";
 import {StorageEdit} from "./StorageEdit";
 import {ProductList} from "./ProductList";
 import {ProductEdit} from "./ProductEdit";
 import {ProductstorageList} from "./ProductstorageList";
+import {ProductstorageShow} from "./ProductstorageShow";
 import inout from "@material-ui/icons/SyncAlt";
 import storage from "@material-ui/icons/LocalShipping";
 import product from "@material-ui/icons/PostAdd";
 import { StorageCreate } from "./StorageCreate";
+import { ProductCreate } from "./ProductCreate";
 import { StorageShow } from "./StorageShow";
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Dashboard from './Dashboard';
+import { theme } from "./theme";
 
 const MyLogoutButton = props => <Logout {...props} icon={<ExitToAppIcon/>} />;
 
@@ -35,7 +40,9 @@ return (
     logoutButton={MyLogoutButton}
     loginPage={MyLoginPage}
     dataProvider={dataProvider}
-    dashboard={Dashboard}>
+    dashboard={Dashboard}
+    theme={theme}
+    >
 
   <Resource 
     name="storages"
@@ -47,6 +54,7 @@ return (
   />
   <Resource 
     name="products"
+    create={ProductCreate}
     list={ProductList}
     edit={ProductEdit}
     icon={product}
@@ -57,10 +65,13 @@ return (
     list={InputoutputList}
     edit={InputoutputEdit}
     icon={inout}
+    show={InputoutputShow}
+    create={InputoutputCreate}
   />
   <Resource 
     name="productstorages" 
-    list={ProductstorageList} 
+    list={ProductstorageList}
+    show={ProductstorageShow} 
   />
   </Admin>
   );

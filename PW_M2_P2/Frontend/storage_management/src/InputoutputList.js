@@ -3,7 +3,7 @@ import {List, Datagrid, TextField, NumberField, DateField,
 
     export const InputoutputList = props => (
         <List {...props}>
-            <Datagrid rowClick="edit">
+            <Datagrid>
                 {/* <NumberField source="id" /> */}
                 <DateField source="date_time" showTime/>
                 <NumberField source="quantity" />
