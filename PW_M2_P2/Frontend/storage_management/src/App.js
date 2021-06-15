@@ -11,15 +11,18 @@ import {ProductstorageList} from "./ProductstorageList";
 import inout from "@material-ui/icons/SyncAlt";
 import storage from "@material-ui/icons/LocalShipping";
 import product from "@material-ui/icons/PostAdd";
+import { theme } from "./theme";
 
 
 
 const dataProvider = lb4Provider("http://localhost:3000");
 
 const App = () => (
-  <Admin dataProvider={dataProvider}>
+  <Admin dataProvider={dataProvider}
+  theme={theme}
+  >
 
-  <Resource 
+0  <Resource 
     name="storages" 
     list={StorageList} 
     edit={StorageEdit} 
