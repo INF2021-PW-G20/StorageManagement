@@ -25,13 +25,7 @@ const dataProvider = lb4Provider('http://localhost:3000');
 const App = () => {
   console.log(InputoutputList());
   return (
-    <Admin
-      logoutButton={MyLogoutButton}
-      loginPage={MyLoginPage}
-      dataProvider={dataProvider}
-      dashboard={Dashboard}
-      theme={theme}
-    >
+    <Admin dataProvider={dataProvider} dashboard={Dashboard} theme={theme}>
       <Resource
         name="storages"
         create={StorageCreate}
