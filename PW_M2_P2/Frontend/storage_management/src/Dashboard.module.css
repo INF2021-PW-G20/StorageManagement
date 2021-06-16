@@ -1,0 +1,11 @@
+.cardStyle {
+  width: 300px;
+  min-height: 300px;
+  margin: '0.5em';
+  display: 'inline-block';
+  vertical-align: 'top';
+}
+
+.gridDashboard {
+  display: inline;
+}

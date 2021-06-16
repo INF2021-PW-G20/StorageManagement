@@ -1,70 +1,51 @@
-import { Admin, ListGuesser, Login, Logout, Resource } from "react-admin";
-import lb4Provider from "react-admin-lb4";
-import {InputoutputList} from "./InputoutputList";
-import {InputoutputEdit} from "./InputoutputEdit";
-import {StorageList} from "./StorageList";
-import {StorageEdit} from "./StorageEdit";
-import {ProductList} from "./ProductList";
-import {ProductEdit} from "./ProductEdit";
-import {ProductstorageList} from "./ProductstorageList";
-import inout from "@material-ui/icons/SyncAlt";
-import storage from "@material-ui/icons/LocalShipping";
-import product from "@material-ui/icons/PostAdd";
-import { StorageCreate } from "./StorageCreate";
-import { StorageShow } from "./StorageShow";
+import { Admin, ListGuesser, Login, Logout, Resource } from 'react-admin';
+import lb4Provider from 'react-admin-lb4';
+import { InputoutputList } from './InputoutputList';
+import { InputoutputEdit } from './InputoutputEdit';
+import { StorageList } from './StorageList';
+import { StorageEdit } from './StorageEdit';
+import { ProductList } from './ProductList';
+import { ProductEdit } from './ProductEdit';
+import { ProductstorageList } from './ProductstorageList';
+import inout from '@material-ui/icons/SyncAlt';
+import storage from '@material-ui/icons/LocalShipping';
+import product from '@material-ui/icons/PostAdd';
+import { StorageCreate } from './StorageCreate';
+import { StorageShow } from './StorageShow';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Dashboard from './Dashboard';
 
-const MyLogoutButton = props => <Logout {...props} icon={<ExitToAppIcon/>} />;
-
-
-const dataProvider = lb4Provider("http://localhost:3000");
-
-const MyLoginPage = () => (
-  <Login
-    backgroundImage="https://source.unsplash.com/random/1600x900/daily"
-  />
-)
-
-
+const dataProvider = lb4Provider('http://localhost:3000');
 
 const App = () => {
-  console.log(InputoutputList())  
-return (
-  <Admin 
-    logoutButton={MyLogoutButton}
-    loginPage={MyLoginPage}
-    dataProvider={dataProvider}
-    dashboard={Dashboard}>
+  console.log(InputoutputList());
+  return (
+    <Admin dataProvider={dataProvider} dashboard={Dashboard}>
+      <Resource
+        name="storages"
+        create={StorageCreate}
+        list={StorageList}
+        edit={StorageEdit}
+        show={StorageShow}
+        icon={storage}
+      />
+      <Resource
+        name="products"
+        list={ProductList}
+        edit={ProductEdit}
+        icon={product}
+      />
 
-  <Resource 
-    name="storages"
-    create={StorageCreate} 
-    list={StorageList} 
-    edit={StorageEdit}
-    show={StorageShow}
-    icon={storage}
-  />
-  <Resource 
-    name="products"
-    list={ProductList}
-    edit={ProductEdit}
-    icon={product}
-  />
-  
-  <Resource 
-    name="inputoutputs"
-    list={InputoutputList}
-    edit={InputoutputEdit}
-    icon={inout}
-  />
-  <Resource 
-    name="productstorages" 
-    list={ProductstorageList} 
-  />
-  </Admin>
+      <Resource
+        name="inputoutputs"
+        list={InputoutputList}
+        edit={InputoutputEdit}
+        icon={inout}
+      />
+      <Resource name="productstorages" list={ProductstorageList} />
+    </Admin>
   );
-}
+};
 // import logo from './logo.svg';
 // import './App.css';
 
