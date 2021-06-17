@@ -19,6 +19,9 @@ import { StorageShow } from './StorageShow';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Dashboard from './Dashboard';
 import { theme } from './theme';
+import { ProductShow } from './ProductShow';
+
+import './App.css';
 
 const dataProvider = lb4Provider('http://localhost:3000');
 
@@ -38,6 +41,7 @@ const App = () => {
         name="products"
         create={ProductCreate}
         list={ProductList}
+        show={ProductShow}
         edit={ProductEdit}
         icon={product}
       />

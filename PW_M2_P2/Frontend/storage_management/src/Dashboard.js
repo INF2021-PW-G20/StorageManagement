@@ -33,18 +33,19 @@ export default () => {
     const res = await fetch(`http://localhost:3000/products`, {
       method: 'GET',
     });
+
     const json = await res.json();
+
     setDataProduct(json);
     setStockNumber(json.filter((item) => item.stock > 0).length);
-    console.log(json);
   }
   React.useEffect(() => {
     productsData();
   }, []); //Usado para renderizar só a primeira vez
-  //   React.useEffect(() => {
-  //     console.log('novo!');
-  //     console.log(dataSelect);
-  //   }, [dataSelect]);
+  React.useEffect(() => {
+    console.log('novo!');
+    console.log(dataSelect);
+  }, [dataSelect]);
   return (
     <div className={style.gridDashboard}>
       <Card className={style.cardStyle}>
@@ -53,10 +54,10 @@ export default () => {
           <p>{dataProduct.length ? stockNumber : 'A carregar produtos...'}</p>
           <select
             value={dataSelect.prodStock}
-            onChange={({ target }) => {
-              //   console.log('antigo!');
-              //   console.log(dataSelect);
-              setDataSelect({ ...dataSelect, prodStock: target.value });
+            onChange={(e) => {
+              console.log('antigo!');
+              console.log(dataSelect);
+              setDataSelect({ ...dataSelect, prodStock: e.target.value });
             }}
           >
             <option value="" disabled hidden>
