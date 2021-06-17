@@ -45,7 +45,18 @@ export const ProductShow = (props) => {
           <TextField source="type" />
           <NumberField source="uprice" />
           <NumberField source="stock" />
-          <Link
+          <Button
+            href="/#/products"
+            label="Back"
+            style={{
+              display: 'flex',
+              maxWidth: 'max-content',
+              marginLeft: 'auto',
+            }}
+          >
+            <ArrowBackIcon />
+          </Button>
+          {/* <Link
             style={{
               display: 'flex',
               alignItems: 'center',
@@ -61,7 +72,7 @@ export const ProductShow = (props) => {
           >
             <ArrowBackIcon style={{ marginRight: '5px', marginTop: '5px' }} />
             Back
-          </Link>
+          </Link> */}
         </SimpleShowLayout>
       </Show>
       {storages.length ? (
@@ -74,62 +85,51 @@ export const ProductShow = (props) => {
                 <TableCell align="center">Shelf</TableCell>
                 <TableCell align="center">Name</TableCell>
                 <TableCell align="center"></TableCell>
+                <TableCell align="center"></TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {storages.map((store) => (
                 <TableRow key={store.id}>
-                  <TableCell align="center">{store.corridor}</TableCell>
-                  <TableCell align="center">{store.box}</TableCell>
-                  <TableCell align="center">{store.shelf}</TableCell>
-                  <TableCell align="center">{store.name}</TableCell>
-                  <TableCell align="center">
-                    <div
+                  <TableCell style={{ padding: '12px' }} align="center">
+                    {store.corridor}
+                  </TableCell>
+                  <TableCell style={{ padding: '12px' }} align="center">
+                    {store.box}
+                  </TableCell>
+                  <TableCell style={{ padding: '12px' }} align="center">
+                    {store.shelf}
+                  </TableCell>
+                  <TableCell style={{ padding: '12px' }} align="center">
+                    {store.name}
+                  </TableCell>
+                  <TableCell style={{ padding: '12px' }} align="center">
+                    <Button
+                      href={`/#/storages/${store.id}`}
+                      label="Edit"
                       style={{
                         display: 'flex',
-                        alignItems: 'center',
-                        gap: '10px',
-                        flexWrap: 'wrap',
+                        maxWidth: 'max-content',
+                        marginLeft: 'auto',
+                        padding: '0',
                       }}
                     >
-                      <Link
-                        style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          padding: '5px 15px',
-                          backgroundColor: 'Lavender',
-                          maxWidth: '67px',
-                          textTransform: 'uppercase',
-                          textDecoration: 'none',
-                          borderRadius: '3px',
-                        }}
-                        to={`storages/${store.id}`}
-                      >
-                        <EditIcon
-                          style={{ marginRight: '5px', marginTop: '5px' }}
-                        />
-                        Edit
-                      </Link>
-
-                      <Link
-                        style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          padding: '5px 15px',
-                          backgroundColor: 'Lavender',
-                          maxWidth: '67px',
-                          textTransform: 'uppercase',
-                          textDecoration: 'none',
-                          borderRadius: '3px',
-                        }}
-                        to={`storages/${store.id}`}
-                      >
-                        <VisibilityIcon
-                          style={{ marginRight: '5px', marginTop: '5px' }}
-                        />
-                        Show
-                      </Link>
-                    </div>
+                      <EditIcon />
+                    </Button>
+                  </TableCell>
+                  <TableCell style={{ padding: '12px' }} align="center">
+                    <Button
+                      href={`/#/storages/${store.id}/show`}
+                      label="Show"
+                      style={{
+                        display: 'flex',
+                        maxWidth: 'max-content',
+                        marginLeft: 'auto',
+                        padding: '0',
+                      }}
+                    >
+                      <VisibilityIcon />
+                    </Button>
                   </TableCell>
                 </TableRow>
               ))}

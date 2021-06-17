@@ -120,4 +120,8 @@ table th {
   table td:last-child {
     border-bottom: 0 !important;
   }
+
+  tr.MuiTableRow-root {
+    margin: 15px;
+  }
 }
