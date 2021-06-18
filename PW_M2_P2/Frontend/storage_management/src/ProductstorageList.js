@@ -6,24 +6,31 @@ import {
   ShowButton,
   FunctionField,
   Filter,
-  SearchInput,
+  ReferenceInput,
+  SelectInput,
 } from 'react-admin';
 import { useMediaQuery } from '@material-ui/core';
 
 const PostFilter = (props) => (
   <Filter {...props}>
-    <SearchInput
-      title="Product"
-      placeholder="Product"
-      source="product_id"
-      alwaysOn
-    />
-    <SearchInput
-      title="Storage"
-      placeholder="Storage"
+    <ReferenceInput
+      label="Storage"
       source="storage_id"
+      reference="storages"
+      perPage={1000}
       alwaysOn
-    />
+    >
+      <SelectInput optionText="name" />
+    </ReferenceInput>
+    <ReferenceInput
+      label="Product"
+      source="product_id"
+      reference="products"
+      perPage={1000}
+      alwaysOn
+    >
+      <SelectInput optionText="name" />
+    </ReferenceInput>
   </Filter>
 );
 
