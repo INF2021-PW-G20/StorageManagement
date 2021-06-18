@@ -50,8 +50,15 @@ _O projeto está dividido nos seguintes capítulos._
 
 ```
 
-#### Iniciar node server JS
-> Deve navegar no terminar até à pasta onde se encontra o repositório do projeto antes de executar os serguintes comandos.
+#### Importar Base de Dados
+
+[BD](https://github.com/INF2021-PW-G20/StorageManagement/tree/master/Docs/BDscripts)
+
+#### Iniciar Backend
+> 
+```bash
+    cd ./PW_M2_P2/Backend/sm
+```
 ```bash
 
     npm install
@@ -63,19 +70,64 @@ _O projeto está dividido nos seguintes capítulos._
 
 ```
 
-### Aceder ao link
+##### Aceder ao link
 
 ```bash
     http://127.0.0.1:3000
 ```
 
+#### Iniciar Frontend
+> 
+```bash
+    cd ./PW_M2_P2/Frontend/storage_management
+```
+```bash
+
+    npm install
+
+```
+```bash
+
+    npm start
+
+```
+##### Aceder ao link
+
+```bash
+    http://127.0.0.1:3006
+```
+
 ### Métodos do projeto
 * [Métodos](Docs/method.md)
 
-### _User Interface_ (UI)
-* _User Interface e Mapa do site_
+
+### Árvore do site
+
+* Dashboard
+* Storages
+    - Create, Show, Edit, Delete
+* Products
+    - Create, Show, Edit, Delete
+* Input/outputs
+    - Create, Show, Edit, Delete
+* ProductsStorages
+    - Show
+
+
 ### O produto
-* _Produto_
+![](/images/dashboard.png)
+
+![](/images/storages.png)
+
+![](/images/storages_products.png)
+
+![](/images/products.png)
+
+![](/images/inputoutput.png)
+
+![](/images/productsstorages.png)
+
+
 ### Apresentação
 * _Apresentação_
 
