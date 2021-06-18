@@ -49,6 +49,7 @@ _O projeto está dividido nos seguintes capítulos._
 
 [BD](https://github.com/INF2021-PW-G20/StorageManagement/tree/master/Docs/BDscripts)
 
+
 #### Iniciar Backend
 > 
 ```bash
@@ -91,7 +92,7 @@ _O projeto está dividido nos seguintes capítulos._
 ```bash
     http://127.0.0.1:3006
 ```
-
+---
 ### Métodos do projeto
 * [Métodos](Docs/method.md)
 
@@ -137,9 +138,11 @@ _PRODUCT STORAGE LIST_
 
 _EXEMPLO RESPONSIVIDADE_
 _DASHBOARD_
+
 ![](/images/resp1.png)
 
 _TABELAS_
+
 ![](/images/resp2.png)
 
 
