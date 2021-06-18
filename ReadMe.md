@@ -12,11 +12,6 @@ _Projeto constituido pelos seguinte repostórios principais_
 * **Código fonte** => [StorageManagement](https://github.com/INF2021-PW-G20/StorageManagement).
 * **Documentação** => [Docs](https://github.com/INF2021-PW-G20/StorageManagement/Docs).
 
-## Galeria
-
-_Work in progress_<br/>
-![](/images/underConstruction.jpg)
-
 ## Modelo conceptual
 
 ![](/images/Concept_diagram.png)
@@ -127,9 +122,9 @@ _O projeto está dividido nos seguintes capítulos._
 
 ![](/images/productsstorages.png)
 
+![](/images/resp1.png)
+![](/images/resp2.png)
 
-### Apresentação
-* _Apresentação_
 
 ## Equipa de desenvolvimento
 * João Afonso - [@Jafonso55](https://github.com/Jafonso55)
