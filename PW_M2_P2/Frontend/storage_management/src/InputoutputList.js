@@ -11,28 +11,68 @@ import {
   FunctionField,
   Filter,
   SearchInput,
+  RadioButtonGroupInput,
+  ReferenceInput,
+  SelectInput,
+  Button,
 } from 'react-admin';
 import CheckCircleRoundedIcon from '@material-ui/icons/CheckCircleRounded';
 import CancelRoundedIcon from '@material-ui/icons/CancelRounded';
 import { useMediaQuery } from '@material-ui/core';
 
 const PostFilter = (props) => (
-  <Filter {...props}>
-    <SearchInput
-      title="Date, Time"
-      placeholder="Date, Time"
-      source="date_time"
-    />
-    <SearchInput
+  <>
+    <Filter {...props}>
+      <SearchInput
+        title="Date, Time"
+        placeholder="Date, Time"
+        source="date_time"
+      />
+      {/* <SearchInput
       title="Operation"
       placeholder="Operation"
       source="operation"
+      choices={[
+        {
+          id: 0,
+          name: 'Saída',
+        },
+        { id: 1, name: 'Entrada' },
+      ]}
       alwaysOn
-    />
-    <SearchInput title="Quantity" placeholder="Quantity" source="quantity" />
-    <SearchInput title="Storage" placeholder="Storage" source="storage_id" />
-    <SearchInput title="Product" placeholder="Product" source="product_id" />
-  </Filter>
+    /> */}
+      <RadioButtonGroupInput
+        source="operation"
+        choices={[
+          {
+            id: 0,
+            name: 'Output',
+          },
+          { id: 1, name: 'Input' },
+          { id: null, name: 'None' },
+        ]}
+        alwaysOn
+        resettable
+      />
+      <ReferenceInput
+        label="Storage"
+        source="storage_id"
+        reference="storages"
+        perPage={1000}
+      >
+        <SelectInput optionText="name" />
+      </ReferenceInput>
+      <ReferenceInput
+        label="Product"
+        source="product_id"
+        reference="products"
+        perPage={1000}
+      >
+        <SelectInput optionText="name" />
+      </ReferenceInput>
+      <SearchInput title="Quantity" placeholder="Quantity" source="quantity" />
+    </Filter>
+  </>
 );
 
 export const InputoutputList = (props) => {
