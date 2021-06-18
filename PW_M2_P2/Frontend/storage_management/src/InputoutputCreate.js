@@ -12,8 +12,6 @@ import {
 } from 'react-admin';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
-import { useHistory } from 'react-router-dom';
-
 export const InputoutputCreate = (props) => {
   const dataProvider = useDataProvider();
   const dateNow = new Date().toISOString();

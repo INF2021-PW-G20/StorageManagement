@@ -14,7 +14,6 @@ import {
   RadioButtonGroupInput,
   ReferenceInput,
   SelectInput,
-  Button,
 } from 'react-admin';
 import CheckCircleRoundedIcon from '@material-ui/icons/CheckCircleRounded';
 import CancelRoundedIcon from '@material-ui/icons/CancelRounded';

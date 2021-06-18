@@ -31,8 +31,8 @@ export default () => {
     productsData();
   }, []); //Usado para renderizar só a primeira vez
   React.useEffect(() => {
-    console.log('novo!');
-    console.log(dataSelect);
+    // console.log('novo!');
+    // console.log(dataSelect);
   }, [dataSelect]);
   return (
     <div className={style.gridDashboard}>
