@@ -20,6 +20,9 @@ import {
 import lb4Provider from 'react-admin-lb4';
 import style from './Dashboard.module.css';
 import { Link } from 'react-router-dom';
+import { PieChart } from 'react-minimal-pie-chart';
+import { Button } from '@material-ui/core';
+import VisibilityIcon from '@material-ui/icons/Visibility';
 
 export default () => {
   const [dataProduct, setDataProduct] = React.useState([]);
@@ -49,10 +52,55 @@ export default () => {
   return (
     <div className={style.gridDashboard}>
       <Card className={style.cardStyle}>
-        <CardHeader title="PRODUCTS" icon={inout} subheader="Has stock" />
-        <CardContent>
-          <p>{dataProduct.length ? stockNumber : 'A carregar produtos...'}</p>
+        <CardHeader
+          title="PRODUCTS"
+          subheader={
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+              }}
+            >
+              <span>Has Stock</span>
+              <h2>
+                {dataProduct.length ? stockNumber : 'A carregar produtos...'}
+              </h2>
+            </div>
+          }
+        />
+        <CardContent
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            marginTop: '-25px',
+          }}
+        >
+          <PieChart
+            style={{ maxWidth: '300px', marginBottom: '20px' }}
+            animate
+            animationDuration={500}
+            animationEasing="ease-out"
+            data={[{ value: stockNumber, color: '#55C937' }]}
+            totalValue={dataProduct.length}
+            lineWidth={20}
+            label={({ dataEntry }) =>
+              ((dataEntry.value * 100) / dataProduct.length).toFixed(1) + '%'
+            }
+            labelStyle={{
+              fontSize: '20px',
+              fontFamily: 'sans-serif',
+              fill: '#55C937',
+            }}
+            labelPosition={0}
+          />
           <select
+            style={{
+              background: 'unset',
+              border: '1px solid #333',
+              padding: '5px',
+              borderRadius: '3px',
+            }}
             value={dataSelect.prodStock}
             onChange={(e) => {
               console.log('antigo!');
@@ -72,26 +120,82 @@ export default () => {
               ))}
           </select>
         </CardContent>
-        <CardActions style={{ textAlign: 'right' }}>
+        <CardActions style={{ justifyContent: 'end', marginBottom: 0 }}>
           {dataSelect.prodStock ? (
-            <Link to={`/products/${dataSelect.prodStock}/show`}>
-              Show details
-            </Link>
+            <Button
+              href={`/#/products/${dataSelect.prodStock}/show`}
+              label="Show"
+              style={{
+                display: 'flex',
+                maxWidth: 'max-content',
+                marginLeft: 'auto',
+              }}
+            >
+              <VisibilityIcon style={{ color: '#55C937' }} />
+            </Button>
           ) : (
+            // <Link to={`/products/${dataSelect.prodStock}/show`}>
+            //   Show details
+            // </Link>
             'Select a product to show details'
           )}
         </CardActions>
       </Card>
-
       <Card className={style.cardStyle}>
-        <CardHeader title="PRODUCTS" icon={inout} subheader="No stock" />
-        <CardContent>
-          <p>
-            {dataProduct.length
-              ? dataProduct.length - stockNumber
-              : 'A carregar produtos...'}
-          </p>
+        <CardHeader
+          title="PRODUCTS"
+          icon={inout}
+          subheader={
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+              }}
+            >
+              <span>No Stock</span>
+              <h2>
+                {dataProduct.length
+                  ? dataProduct.length - stockNumber
+                  : 'A carregar produtos...'}
+              </h2>
+            </div>
+          }
+        />
+        <CardContent
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            marginTop: '-25px',
+          }}
+        >
+          <PieChart
+            style={{ maxWidth: '300px', marginBottom: '20px' }}
+            animate
+            animationDuration={500}
+            animationEasing="ease-out"
+            data={[
+              { value: dataProduct.length - stockNumber, color: '#C90000' },
+            ]}
+            totalValue={dataProduct.length}
+            lineWidth={20}
+            label={({ dataEntry }) =>
+              ((dataEntry.value * 100) / dataProduct.length).toFixed(1) + '%'
+            }
+            labelStyle={{
+              fontSize: '20px',
+              fontFamily: 'sans-serif',
+              fill: '#C90000',
+            }}
+            labelPosition={0}
+          />
           <select
+            style={{
+              background: 'unset',
+              border: '1px solid #333',
+              padding: '5px',
+              borderRadius: '3px',
+            }}
             value={dataSelect.prodNoStock}
             onChange={({ target }) =>
               setDataSelect({ ...dataSelect, prodNoStock: target.value })
@@ -111,10 +215,21 @@ export default () => {
         </CardContent>
         <CardActions style={{ justifyContent: 'end', marginBottom: 0 }}>
           {dataSelect.prodNoStock ? (
-            <Link to={`/products/${dataSelect.prodNoStock}/show`}>
-              Show details
-            </Link>
+            <Button
+              href={`/#/products/${dataSelect.prodNoStock}/show`}
+              label="Show"
+              style={{
+                display: 'flex',
+                maxWidth: 'max-content',
+                marginLeft: 'auto',
+              }}
+            >
+              <VisibilityIcon style={{ color: '#C90000' }} />
+            </Button>
           ) : (
+            // <Link to={`/products/${dataSelect.prodNoStock}/show`}>
+            //   Show details
+            // </Link>
             'Select a product to show details'
           )}
         </CardActions>

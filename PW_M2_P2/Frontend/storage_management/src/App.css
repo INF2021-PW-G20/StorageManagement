@@ -125,3 +125,15 @@ table th {
     margin: 15px;
   }
 }
+
+.MuiCard-root:first-child .MuiCardHeader-subheader {
+  color: #55c937;
+}
+
+.MuiCard-root:last-child .MuiCardHeader-subheader {
+  color: #c90000;
+}
+
+/* {
+  color: green !important;
+} */

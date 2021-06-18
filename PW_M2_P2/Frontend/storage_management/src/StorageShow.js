@@ -140,7 +140,17 @@ export const StorageShow = (props) => {
           <NumberField source="shelf" />
           <NumberField source="box" />
           <TextField source="name" />
-          <Button href="/#/storages" label="Back" icon={ArrowBackIcon} />
+          <Button
+            href="/#/storages"
+            label="Back"
+            style={{
+              display: 'flex',
+              maxWidth: 'max-content',
+              marginLeft: 'auto',
+            }}
+          >
+            <ArrowBackIcon />
+          </Button>
         </SimpleShowLayout>
 
         {/* <ReferenceManyField
@@ -174,7 +184,7 @@ export const StorageShow = (props) => {
                 <TableCell align="center">{product.type}</TableCell>
                 <TableCell align="center">{product.stock}</TableCell>
                 <TableCell align="center">{product.uprice}</TableCell>
-                <TableCell align="center">
+                {/* <TableCell align="center">
                   <div
                     style={{
                       display: 'flex',
@@ -221,6 +231,34 @@ export const StorageShow = (props) => {
                       Show
                     </Link>
                   </div>
+                </TableCell> */}
+                <TableCell style={{ padding: '12px' }} align="center">
+                  <Button
+                    href={`/#/products/${product.id}`}
+                    label="Edit"
+                    style={{
+                      display: 'flex',
+                      maxWidth: 'max-content',
+                      marginLeft: 'auto',
+                      padding: '0',
+                    }}
+                  >
+                    <EditIcon />
+                  </Button>
+                </TableCell>
+                <TableCell style={{ padding: '12px' }} align="center">
+                  <Button
+                    href={`/#/products/${product.id}/show`}
+                    label="Show"
+                    style={{
+                      display: 'flex',
+                      maxWidth: 'max-content',
+                      marginLeft: 'auto',
+                      padding: '0',
+                    }}
+                  >
+                    <VisibilityIcon />
+                  </Button>
                 </TableCell>
               </TableRow>
             ))}

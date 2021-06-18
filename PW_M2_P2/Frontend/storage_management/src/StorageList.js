@@ -16,20 +16,20 @@ import EditAttributesIcon from '@material-ui/icons/EditAttributes';
 import { useMediaQuery } from '@material-ui/core';
 // import { ReferenceManyToManyField } from '@react-admin/ra-relationships';
 
-const useStyles = makeStyles({
-  button: {
-    fontWeight: 'bold',
-    fontStyle: 'italic',
-    backgroundColor: 'Lavender',
-    // This is JSS syntax to target a deeper element using css selector, here the svg icon for this button
-    '& svg': { color: 'black' },
-  },
-});
+// const useStyles = makeStyles({
+//   button: {
+//     fontWeight: 'bold',
+//     fontStyle: 'italic',
+//     backgroundColor: 'Lavender',
+//     // This is JSS syntax to target a deeper element using css selector, here the svg icon for this button
+//     '& svg': { color: 'black' },
+//   },
+// });
 
-const MyEditButton = (props) => {
-  const classes = useStyles();
-  return <EditButton className={classes.button} {...props} />;
-};
+// const MyEditButton = (props) => {
+//   const classes = useStyles();
+//   return <EditButton className={classes.button} {...props} />;
+// };
 
 export const StorageList = (props) => {
   const isSmall = useMediaQuery('(max-width:600px)');
@@ -94,7 +94,7 @@ export const StorageList = (props) => {
           </Datagrid>
         </ReferenceManyToManyField> */}
           <ShowButton />
-          <MyEditButton />
+          <EditButton />
           <DeleteButton />
         </Datagrid>
       )}
