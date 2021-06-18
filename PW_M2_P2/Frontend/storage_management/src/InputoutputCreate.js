@@ -6,10 +6,8 @@ import {
   FunctionField,
   useDataProvider,
   Button,
-  FormDataConsumer,
   ReferenceInput,
   SelectInput,
-  SelectArrayInput,
   RadioButtonGroupInput,
 } from 'react-admin';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
@@ -18,12 +16,11 @@ import { useHistory } from 'react-router-dom';
 
 export const InputoutputCreate = (props) => {
   const dataProvider = useDataProvider();
-  const history = useHistory();
   const dateNow = new Date().toISOString();
-  const [quant, setQuant] = React.useState(1);
-  const [stor, setStor] = React.useState([]);
-  const [prod, setProd] = React.useState([]);
-  const [oper, setOper] = React.useState(1);
+  // const [quant, setQuant] = React.useState(1);
+  // const [stor, setStor] = React.useState([]);
+  // const [prod, setProd] = React.useState([]);
+  // const [oper, setOper] = React.useState(1);
   const [operationStor, setOperationStor] = React.useState({
     data: { storages: [], products: [] },
   });
@@ -40,14 +37,6 @@ export const InputoutputCreate = (props) => {
   React.useEffect(() => {
     spList();
   }, []);
-
-  const obj = {
-    date_time: '2021-06-18T13:49:32.792Z',
-    quantity: 2,
-    operation: 0,
-    storage_id: 21,
-    product_id: 96,
-  };
 
   return (
     <Create {...props}>
@@ -69,39 +58,6 @@ export const InputoutputCreate = (props) => {
             { id: 1, name: 'Entrada' },
           ]}
         />
-        {/* <FunctionField
-          source="operation"
-          value={oper}
-          render={(io) => {
-            io.operation = oper;
-            console.log('abaixo do render');
-
-            console.log(io);
-
-            return (
-              <select
-                value={oper}
-                onChange={({ target }) => {
-                  setOper(+target.value);
-
-                  io.operation = +target.value;
-                  console.log('abaixo do onChange');
-
-                  console.log(io);
-                }}
-                style={{
-                  background: 'unset',
-                  border: '1px solid #333',
-                  padding: '5px',
-                  borderRadius: '3px',
-                }}
-              >
-                <option value={0}>Saída</option>
-                <option value={1}>Entrada</option>
-              </select>
-            );
-          }}
-        /> */}
         <ReferenceInput
           label="Storage"
           source="storage_id"
@@ -110,38 +66,6 @@ export const InputoutputCreate = (props) => {
         >
           <SelectInput optionText="name" />
         </ReferenceInput>
-        {/* <FunctionField
-          source="storage_id"
-          value={stor}
-          render={(io) => {
-            return (
-              <select
-                onChange={({ target }) => {
-                  setStor(+target.value);
-                  io.storage_id = +target.value;
-                  console.log('abaixo do onChange');
-
-                  console.log(io);
-                }}
-                style={{
-                  background: 'unset',
-                  border: '1px solid #333',
-                  padding: '5px',
-                  borderRadius: '3px',
-                }}
-              >
-                <option value="" disabled hidden>
-                  Storages
-                </option>
-                {operationStor.data.storages.map((item) => (
-                  <option value={item.id} key={item.id}>
-                    {item.name}
-                  </option>
-                ))}
-              </select>
-            );
-          }}
-        /> */}
         <ReferenceInput
           label="Product"
           source="product_id"
