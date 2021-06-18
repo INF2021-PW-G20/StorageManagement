@@ -1,25 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardHeader from '@material-ui/core/CardHeader';
 import inout from '@material-ui/icons/SyncAlt';
-import Typography from '@material-ui/core/Typography';
-import {
-  TextField,
-  DateField,
-  ShowButton,
-  FormDataConsumer,
-  SelectInput,
-  NumberField,
-  Show,
-  Resource,
-  SimpleShowLayout,
-  Admin,
-} from 'react-admin';
-import lb4Provider from 'react-admin-lb4';
 import style from './Dashboard.module.css';
-import { Link } from 'react-router-dom';
 import { PieChart } from 'react-minimal-pie-chart';
 import { Button } from '@material-ui/core';
 import VisibilityIcon from '@material-ui/icons/Visibility';

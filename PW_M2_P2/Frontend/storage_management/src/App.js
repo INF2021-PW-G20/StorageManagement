@@ -1,4 +1,4 @@
-import { Admin, Login, Logout, Resource } from 'react-admin';
+import { Admin, Resource } from 'react-admin';
 import lb4Provider from 'react-admin-lb4';
 import { InputoutputList } from './InputoutputList';
 import { InputoutputEdit } from './InputoutputEdit';
@@ -16,7 +16,6 @@ import product from '@material-ui/icons/PostAdd';
 import { StorageCreate } from './StorageCreate';
 import { ProductCreate } from './ProductCreate';
 import { StorageShow } from './StorageShow';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Dashboard from './Dashboard';
 import { theme } from './theme';
 import { ProductShow } from './ProductShow';

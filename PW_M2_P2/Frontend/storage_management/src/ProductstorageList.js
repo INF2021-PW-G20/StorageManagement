@@ -5,8 +5,27 @@ import {
   ReferenceField,
   ShowButton,
   FunctionField,
+  Filter,
+  SearchInput,
 } from 'react-admin';
 import { useMediaQuery } from '@material-ui/core';
+
+const PostFilter = (props) => (
+  <Filter {...props}>
+    <SearchInput
+      title="Product"
+      placeholder="Product"
+      source="product_id"
+      alwaysOn
+    />
+    <SearchInput
+      title="Storage"
+      placeholder="Storage"
+      source="storage_id"
+      alwaysOn
+    />
+  </Filter>
+);
 
 export const ProductstorageList = (props) => {
   const isSmall = useMediaQuery('(max-width:600px)');
@@ -27,7 +46,7 @@ export const ProductstorageList = (props) => {
   };
 
   return (
-    <List {...props}>
+    <List filters={<PostFilter />} {...props}>
       {isSmall ? (
         <Datagrid style={{ margin: '15px' }}>
           <FunctionField
@@ -52,6 +71,7 @@ export const ProductstorageList = (props) => {
               )
             }
           />
+          <ShowButton />
         </Datagrid>
       ) : (
         <Datagrid rowClick="show">

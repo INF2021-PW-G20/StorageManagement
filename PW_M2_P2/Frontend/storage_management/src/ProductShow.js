@@ -5,9 +5,9 @@ import {
   Show,
   Button,
 } from 'react-admin';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import React from 'react';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';

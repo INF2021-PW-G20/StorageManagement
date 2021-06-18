@@ -1,17 +1,13 @@
 import React from 'react';
-import { useState } from 'react';
 import {
   Create,
   SimpleForm,
-  TextInput,
   NumberInput,
-  DateTimeInput,
-  DateInput,
   FunctionField,
-  TextField,
-  AutocompleteInput,
   useDataProvider,
+  Button,
 } from 'react-admin';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 export const InputoutputCreate = (props) => {
   const dataProvider = useDataProvider();
@@ -42,22 +38,43 @@ export const InputoutputCreate = (props) => {
         <FunctionField
           source="date_time"
           render={(io) => (io.date_time = dateNow)}
+          hidden={true}
+          label={dateNow}
         />
         <NumberInput source="quantity" />
+        {/*  <SelectInput source="operation" label="qasd" />*/}
+
         <FunctionField
           source="operation"
-          render={(io) => (
-            <select
-              onChange={({ target }) => {
-                io.operation = +target.value;
-              }}
-            >
-              <option value={0}>Saída</option>
-              <option value={1}>Entrada</option>
-            </select>
-          )}
+          render={(io) => {
+            return (
+              <select
+                onChange={({ target }) => {
+                  io.operation = +target.value;
+                }}
+                style={{
+                  background: 'unset',
+                  border: '1px solid #333',
+                  padding: '5px',
+                  borderRadius: '3px',
+                }}
+              >
+                <option value={0}>Saída</option>
+                <option value={1}>Entrada</option>
+              </select>
+            );
+          }}
         />
-        {/* <NumberInput source="storage_id" /> */}
+
+        {/* <NumberInput source="storage_id" />  */}
+
+        {/* <ReferenceInput
+          label="Storage"
+          source="storage_id"
+          reference="storages"
+        >
+          <SelectField optionText="name" />
+        </ReferenceInput> */}
         <FunctionField
           source="storage_id"
           render={(io) => {
@@ -65,6 +82,12 @@ export const InputoutputCreate = (props) => {
               <select
                 onChange={({ target }) => {
                   io.storage_id = +target.value;
+                }}
+                style={{
+                  background: 'unset',
+                  border: '1px solid #333',
+                  padding: '5px',
+                  borderRadius: '3px',
                 }}
               >
                 <option value="" disabled hidden>
@@ -87,6 +110,12 @@ export const InputoutputCreate = (props) => {
                 onChange={({ target }) => {
                   io.product_id = +target.value;
                 }}
+                style={{
+                  background: 'unset',
+                  border: '1px solid #333',
+                  padding: '5px',
+                  borderRadius: '3px',
+                }}
               >
                 <option value="" disabled hidden>
                   Products
@@ -100,6 +129,17 @@ export const InputoutputCreate = (props) => {
             );
           }}
         />
+        <Button
+          href="/#/inputoutputs"
+          label="Back"
+          style={{
+            display: 'flex',
+            maxWidth: 'max-content',
+            marginLeft: 'auto',
+          }}
+        >
+          <ArrowBackIcon />
+        </Button>
       </SimpleForm>
     </Create>
   );

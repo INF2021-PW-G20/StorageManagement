@@ -1,17 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Show,
-  List,
   SimpleShowLayout,
   TextField,
   NumberField,
   Button,
-  useDataProvider,
-  Datagrid,
-  ReferenceManyField,
-  ResourceContextProvider,
-  SimpleList,
-  ShowButton,
 } from 'react-admin';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { useParams } from 'react-router-dom';
@@ -21,35 +14,9 @@ import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import { TableHead } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import { TableHead, useMediaQuery } from '@material-ui/core';
 import EditIcon from '@material-ui/icons/Edit';
 import VisibilityIcon from '@material-ui/icons/Visibility';
-
-{
-  /* 
-PRODUCT
-
-id: 96
-​​
-name: "Variador SMD Lenze AC Tech"
-​​
-stock: 7
-​​
-type: " Lenze AC Tech"
-​​
-uprice: 35
-
-params.getValue(params.id, 'uprice') || '',
-*/
-}
-
-const columns = [
-  { field: 'name', headerName: 'Name', width: 200 },
-  { field: 'stock', headerName: 'Stock', width: 150 },
-  { field: 'type', headerName: 'Type', width: 200 },
-  { field: 'uprice', headerName: 'Price', width: 150 },
-];
 
 // const columns = [
 //   { field: 'id', headerName: 'ID', width: 70 },
@@ -98,8 +65,25 @@ const columns = [
 
 export const StorageShow = (props) => {
   const { id } = useParams();
-  const dataProvider = useDataProvider();
+  // const dataProvider = useDataProvider();
   const [prods, setProds] = React.useState([]);
+
+  const isSmall = useMediaQuery('(max-width:600px)');
+
+  const divMobileResponsiveTable = (label, value) => {
+    return (
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}
+      >
+        <h3>{label}</h3>
+        <span>{value}</span>
+      </div>
+    );
+  };
   // console.log(id);
   // console.log(dataProvider);
 
@@ -135,7 +119,7 @@ export const StorageShow = (props) => {
     <div>
       <Show {...props}>
         <SimpleShowLayout>
-          <NumberField source="id" />
+          {/* <NumberField source="id" /> */}
           <NumberField source="corridor" />
           <NumberField source="shelf" />
           <NumberField source="box" />
@@ -175,15 +159,33 @@ export const StorageShow = (props) => {
               <TableCell align="center">Stock</TableCell>
               <TableCell align="center">Price</TableCell>
               <TableCell align="center"></TableCell>
+              <TableCell align="center"></TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {prods.map((product) => (
               <TableRow key={product.id}>
-                <TableCell align="center">{product.name}</TableCell>
-                <TableCell align="center">{product.type}</TableCell>
-                <TableCell align="center">{product.stock}</TableCell>
-                <TableCell align="center">{product.uprice}</TableCell>
+                <TableCell align="center">
+                  {isSmall
+                    ? divMobileResponsiveTable('Name', product.name)
+                    : product.name}
+                </TableCell>
+                <TableCell align="center">
+                  {isSmall
+                    ? divMobileResponsiveTable('Type', product.type)
+                    : product.type}
+                </TableCell>
+                <TableCell align="center">
+                  {isSmall
+                    ? divMobileResponsiveTable('Stock', product.stock)
+                    : product.stock}
+                </TableCell>
+                <TableCell align="center">
+                  {isSmall
+                    ? divMobileResponsiveTable('Price', product.uprice)
+                    : product.uprice}
+                </TableCell>
+
                 {/* <TableCell align="center">
                   <div
                     style={{
@@ -286,9 +288,8 @@ export const StorageShow = (props) => {
   );
 };
 
-{
-  /* <ReferenceManyField reference="books" target="author_id"><SingleFieldList><ChipField source="title" /></SingleFieldList></ReferenceManyField> */
-}
+/* <ReferenceManyField reference="books" target="author_id"><SingleFieldList><ChipField source="title" /></SingleFieldList></ReferenceManyField> */
+
 // export const StorageList = (props) => {
 //   console.log(props);
 //   return (

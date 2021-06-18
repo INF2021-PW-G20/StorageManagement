@@ -6,14 +6,12 @@ import {
   EditButton,
   DeleteButton,
   ShowButton,
-  SingleFieldList,
-  ChipField,
-  Pagination,
   FunctionField,
+  Filter,
+  SearchInput,
 } from 'react-admin';
-import { makeStyles } from '@material-ui/core/styles';
-import EditAttributesIcon from '@material-ui/icons/EditAttributes';
 import { useMediaQuery } from '@material-ui/core';
+
 // import { ReferenceManyToManyField } from '@react-admin/ra-relationships';
 
 // const useStyles = makeStyles({
@@ -30,6 +28,15 @@ import { useMediaQuery } from '@material-ui/core';
 //   const classes = useStyles();
 //   return <EditButton className={classes.button} {...props} />;
 // };
+
+const PostFilter = (props) => (
+  <Filter {...props}>
+    <SearchInput title="Name" placeholder="Name" source="name" alwaysOn />
+    <SearchInput title="Corridor" placeholder="Corridor" source="corridor" />
+    <SearchInput title="Box" placeholder="Box" source="box" />
+    <SearchInput title="Shelf" placeholder="Shelf" source="shelf" />
+  </Filter>
+);
 
 export const StorageList = (props) => {
   const isSmall = useMediaQuery('(max-width:600px)');
@@ -50,7 +57,7 @@ export const StorageList = (props) => {
   };
 
   return (
-    <List {...props}>
+    <List filters={<PostFilter />} {...props}>
       {isSmall ? (
         <Datagrid style={{ margin: '15px' }}>
           <FunctionField

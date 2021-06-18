@@ -6,17 +6,16 @@ import {
   NumberField,
   DeleteButton,
   EditButton,
-  CreateButton,
   ShowButton,
   FunctionField,
   Filter,
-  TextInput,
+  SearchInput,
 } from 'react-admin';
 
 const PostFilter = (props) => (
   <Filter {...props}>
-    <TextInput label="Name" source="name" alwaysOn />
-    <TextInput label="Type" source="type" />
+    <SearchInput title="Name" placeholder="Name" source="name" alwaysOn />
+    <SearchInput title="Type" placeholder="Type" source="type" />
   </Filter>
 );
 
