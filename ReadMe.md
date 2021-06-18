@@ -96,6 +96,8 @@ _O projeto está dividido nos seguintes capítulos._
 * [Métodos](Docs/method.md)
 
 
+* [Métodos](Docs/W3CValidator/)
+
 ### Árvore do site
 
 * Dashboard
@@ -119,11 +121,14 @@ _O projeto está dividido nos seguintes capítulos._
 ![](/images/products.png)
 
 ![](/images/inputoutput.png)
+![](/images/inputoutputcreate.png)
 
 ![](/images/productsstorages.png)
 
 ![](/images/resp1.png)
 ![](/images/resp2.png)
+
+
 
 
 ## Equipa de desenvolvimento
