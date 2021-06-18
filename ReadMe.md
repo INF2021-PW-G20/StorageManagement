@@ -95,8 +95,8 @@ _O projeto está dividido nos seguintes capítulos._
 ### Métodos do projeto
 * [Métodos](Docs/method.md)
 
-
-* [Métodos](Docs/W3CValidator/)
+### W3C VALIDATOR
+* [Resultado](Docs/W3CValidator/)
 
 ### Árvore do site
 
@@ -111,21 +111,35 @@ _O projeto está dividido nos seguintes capítulos._
     - Show
 
 
-### O produto
+### Aplicação
+
+_DASHBOARD_
 ![](/images/dashboard.png)
 
+_STORAGES LIST_
 ![](/images/storages.png)
 
+_STORAGES / PRODUCT RELATION_
 ![](/images/storages_products.png)
 
+_PRODUCT LIST_
 ![](/images/products.png)
 
+_INPUT/OUTPUT LIST_
 ![](/images/inputoutput.png)
+
+_INPUT/OUTPUT CREATE_
 ![](/images/inputoutputcreate.png)
 
+_PRODUCT STORAGE LIST_
 ![](/images/productsstorages.png)
 
+
+_EXEMPLO RESPONSIVIDADE_
+_DASHBOARD_
 ![](/images/resp1.png)
+
+_TABELAS_
 ![](/images/resp2.png)
 
 
